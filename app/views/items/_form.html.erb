@@ -1,0 +1,13 @@
+<%= form_for(@item) do |f| %>
+  <div class = "field">
+  <%= f.label :cep %>
+  <p><%= f.text_field :cep %></p>
+
+  <div class = "field" >
+  <%= f.label :route_id %>
+  <%= f.select :route_id, Route.all.collect { |r| [ r.nome, r.id ] }, :selected => params[:route] unless params[:route].nil? %>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

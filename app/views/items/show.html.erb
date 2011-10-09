@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p> 
+  <b>Rota:</b>
+  <%= @item.route.nome %>
+</p>
+  
+<p>
+  <b>Cep:</b>
+  <%= @item.cep %>
+</p>
+
+<p>
+  <b>Logradouro:</b>
+  <%= @item.logradouro %>
+</p>
+
+<p>
+  <b>Endereco:</b>
+  <%= @item.endereco %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%= @item.bairro %>
+</p>
+
+<p>
+  <b>Cidade:</b>
+  <%= @item.cidade %>
+</p>
+
+<p>
+  <b>Estado:</b>
+  <%= @item.estado %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

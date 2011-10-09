@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<% @route.items.each_index do |x| %>
+  <p><%= x+1 %>. <%= @route.items[x].cep %> </p>
+<% end %>
+
+<%= link_to "Adicionar CEP", :controller => :items, :action => :new, :route =>  @route %> |
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>
