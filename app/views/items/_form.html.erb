@@ -4,8 +4,8 @@
   <p><%= f.text_field :cep %></p>
 
   <div class = "field" >
-  <%= f.label :route_id %>
-  <%= f.select :route_id, Route.all.collect { |r| [ r.nome, r.id ] }, :selected => params[:route]  %>
+  <%= f.label :route_id, "Rota" %>
+  <p><%= f.select :route_id, Route.all.collect { |r| [ r.nome, r.id ] }, :selected => params[:route]  %></p>
   
   <div class="actions">
     <%= f.submit %>
