@@ -1,3 +1,3 @@
 class Item < ActiveRecord::Base
-  belongs_to :route
+  belongs_to :route, :dependent => :destroy
 end
