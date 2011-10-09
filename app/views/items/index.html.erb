@@ -1,14 +1,15 @@
 <h1>Listing items</h1>
 
+
 <table>
   <tr>
     <th>Rota</th>
-    <th>Endereco</th>
-    <th>Cep</th>
     <th>Logradouro</th>
+    <th>Endereco</th>
+    <th>Bairro</th>
     <th>Cidade</th>
     <th>Estado</th>
-    <th>Bairro</th>
+    <th>Cep</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,12 +18,12 @@
 <% @items.each do |item| %>
   <tr>
     <td><%= item.route.nome %></td>
-    <td><%= item.endereco %></td>
-    <td><%= item.cep %></td>
     <td><%= item.logradouro %></td>
+    <td><%= item.endereco %></td>
+    <td><%= item.bairro %></td>
     <td><%= item.cidade %></td>
     <td><%= item.estado %></td>
-    <td><%= item.bairro %></td>
+    <td><%= item.cep %></td>
     <td><%= link_to 'Show', item %></td>
     <td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -32,4 +33,5 @@
 
 <br />
 
+<%= link_to 'Ver rotas', routes_path %>
 <%= link_to 'New Item', new_item_path %>
