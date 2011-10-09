@@ -3,8 +3,8 @@
 <% @route.items.each_index do |x| %>
   <p><%= x+1 %>. 
      <%=link_to @route.items[x].cep, @route.items[x] %>, 
-     <% @route.items[x].cidade %>-
-     <% @route.items[x].estado %></p>
+     <%= @route.items[x].cidade %>-
+     <%= @route.items[x].estado %></p>
 <% end %>
 
 <%= link_to "Adicionar CEP", :controller => :items, :action => :new, :route =>  @route %> |
