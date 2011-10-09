@@ -43,9 +43,7 @@ class ItemsController < ApplicationController
   # POST /items.xml
   def create
     
-    if endereco = BuscaEndereco.por_cep(params[:item][:cep])
-    raise endereco.inspect
-    end
+    
     @item = Item.new( :logradouro => endereco[0], 
                       :endereco => endereco[1], 
                       :bairro => endereco[2],
