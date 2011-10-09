@@ -5,7 +5,7 @@
 
   <div class = "field" >
   <%= f.label :route_id %>
-  <%= f.select :route_id, Route.all.collect { |r| [ r.nome, r.id ] }, :selected => params[:route] unless params[:route].nil? %>
+  <%= f.select :route_id, Route.all.collect { |r| [ r.nome, r.id ] }, :selected => params[:route]  %>
   
   <div class="actions">
     <%= f.submit %>
