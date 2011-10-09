@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% @route.items.each_index do |x| %>
-  <p><%= x+1 %>. <%= @route.items[x].cep %> </p>
+  <p><%= x+1 %>. <%=link_to @route.items[x].cep, @route.items[x] %> </p>
 <% end %>
 
 <%= link_to "Adicionar CEP", :controller => :items, :action => :new, :route =>  @route %> |
